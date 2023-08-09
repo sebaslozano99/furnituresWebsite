@@ -1,0 +1,360 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 10vh;
+    background-color: #eeeeee;
+    overflow: hidden;
+}
+
+.header{
+    /* border: 1px solid red; */
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3em;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.header .burger{
+    cursor: pointer;
+    /* margin-left: 1em; */
+}
+
+
+/* burger menu animation */
+.burger.active .bar:nth-child(2){
+    opacity: 0;
+}
+
+.burger.active .bar:nth-child(1){
+    transform: translateY(6px) rotate(45deg);
+}
+
+.burger.active .bar:nth-child(3){
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+/* burger menu's animation */
+
+.header .burger .bar{
+    display: block;
+    background-color: #000000;
+    width: 20px;
+    height: 2px;
+    margin: 4px auto;
+    transition: all ease-in-out .4s;
+}
+
+
+.cart{
+    /* border: 1px solid red; */
+    width: 4em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .cart .bx{
+    cursor: pointer;
+}
+
+
+.nav{
+    position: absolute;
+    /* border: 1px solid red; */
+    width: 30%;
+    top: 3em;
+    left: -100%;
+    height: 30%;
+    background-color: #585934;
+    z-index: 1;
+    transition: all ease-in-out .5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 3px 3px 13px;
+    /* border-radius: 20px; */
+}
+
+.nav.active{
+    left: 0;
+}
+
+.nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* border: 2px solid purple; */
+    height: 100%;
+    width: 100%;
+}
+
+/* .nav ul li:hover{
+    border: 1px solid red;
+} */
+
+.nav ul li .nav-link{
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.3em;
+    line-height: 2.3;
+    padding-left: 1em;
+}
+
+.nav ul li .nav-link:hover{
+    /* background-color: #000000; */
+    text-decoration: underline;
+}
+
+
+/* header's code ends here */
+
+
+
+/*  MAIN'S CODE STARTS HERE */
+
+/* background's ring lines */
+
+.gold-line{
+    position: absolute;
+    height: 150%;
+    width: 70%;
+    border: 60px solid #585934 ;
+    top: -23%;
+    left: 69%;
+    border-radius: 60%;
+    z-index: -1;
+    transition: all ease-in-out .5s;
+}
+
+
+
+.white-left-background{
+    background-color: #ffffff;
+    position: absolute;
+    height: 120%;
+    width: 55%;
+    top: -8%;
+    left: 78%;
+    border-radius: 60%;
+    z-index: -1;
+}
+
+/* background-right lines */
+
+
+/* furniture */
+
+.furniture-div{
+    /* border: 1px solid orange; */
+    position: absolute;
+    top: 18%;
+    left: 43%;
+}
+
+.furniture-div img{
+    height: 23em;
+    transition: all ease-in-out .5s;
+    /* width: 30em; */
+}
+
+
+/* furniture */
+
+
+/* LEFT SECTION'S CODE START HERE */
+
+
+.sectionOne{
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-section{
+    /* border: 3px solid purple; */
+    width: 70%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 3em;
+}
+
+.left-section h2{
+    font-size: 2.5em;
+    color: #585934;
+    transition: all ease-in-out .5s;
+}
+
+.left-section p{
+    color: gray;
+    width: 50%;
+    font-size: 1em;
+    margin: 1em 0;
+}
+
+.left-section .two-links{
+    /* border: 1px solid red; */
+    width: 38%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left-section .two-links button{
+    background-color: #585934;
+    color: #000000;
+    font-size: 1em;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border-style: none;
+    cursor: pointer;
+    transition: all ease-in-out .5s;
+}
+
+
+.left-section .two-links a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 1em;
+}
+
+/* RIGHT SECTION'S CODE STARTS HERE */
+
+.right-section{
+    /* border: 3px solid green; */
+    height: 80vh;
+    width: 19%;
+    /* background-color: rgba(255, 15, 15, 0.5); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dots-container{
+    /* border: 2px solid red; */
+    height: 7em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.dots-container .dot{
+    position: relative;
+    display: block;
+    width: 14px;
+    height: 14px;
+    /* background-color: #000000; */
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dots-container .dot.active::after{
+        position: absolute;
+        top: -3px;
+        right: -3px;
+        display: block;
+        content: "";
+        border: 1px solid black;
+        height: 18px;
+        width: 18px;
+        border-radius: 50%;
+    
+}
+
+/* .dots-container .dot:hover{
+    text-decoration: underline;
+} */
+
+.dots-container .dot:nth-child(1){
+    background-color: #8E6841;
+}
+
+.dots-container .dot:nth-child(2){
+    background-color: #585934 ;
+}
+
+.dots-container .dot:nth-child(3){
+    background-color: #50418E  ;
+}
+
+.dots-container .dot:nth-child(4){
+    background-color: #000000  ;
+}
+
+
+
+
+.info-container{
+    margin-top: 2em;
+    /* border: 2px solid red; */
+    height: 9em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info-container h3{
+    font-size: 1.6em;
+    letter-spacing: 3px;
+}
+
+.info-container p{
+    text-align: center;
+    font-size: 1.1em;
+    /* font-weight: 1; */
+}
+
+.info-container .plus-sign{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #585934;
+    height: 24px;
+    width: 24px;
+    border-radius: 100%;
+    color: #ffffff;
+    font-weight: bold;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: all ease-in-out .5s;
+}
+
+/* .info-container .bx{
+    margin: 0 auto;
+    cursor: pointer;
+} */
+
+
+/* section code's ends here */
+
+/* FOOTER'S CODE STARTS HERE */
+
+#footer{
+    /* border: 3px solid orange ; */
+    height: 12vh;
+    display: flex;
+    align-items: center;
+}
+
+
+#footer .social{
+    /* border: 2px solid coral; */
+    margin-left: 3em;
+    width: 10em;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+#footer .social a:hover{
+    transform: translateY(-2px);
+    transition: all ease-in .3s;
+}
